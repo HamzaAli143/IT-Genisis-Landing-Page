@@ -13,7 +13,7 @@ header nav{
     justify-content: space-around;
     background-color: #FFFFFF;
     align-items: center;
-    padding: 15px 60px;
+    padding: 20px 60px;
 }
 nav .menus ul{
     display: flex;
@@ -101,12 +101,21 @@ nav .contact-numbers .number-02{
     }
 }
                                         /* body-part-01 */
-#body-part-01{
+#body-part-01, #body-part-2, #body-part-3{
     background: linear-gradient(90deg, #0383BF, #0A375D);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    padding: 5%;
+    padding: 5% 10%;
+}
+#body-part-2{
+    background: linear-gradient(90deg, #7403bf, #0A375D);
+}
+#body-part-3{
+    background: linear-gradient(90deg, #259199, #0A375D);
+}
+#body-part-01{
+    padding: 5% 10%;
 }
 .left-img-part{
     grid-column-start: 1;
@@ -133,6 +142,31 @@ nav .contact-numbers .number-02{
     line-height: 29px;
     color: rgba(255, 255, 255, 0.808);
 }
+.left-part{
+    padding-top: 10%;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+.left-part h1{
+    padding-bottom: 20px;
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.952);
+}
+.left-part p{
+    line-height: 29px;
+    color: rgba(255, 255, 255, 0.808);
+}
+.right-part{
+    grid-column-start: 6;
+    grid-column-end: 13;
+}
+.right-part img{
+    transition: .4s all ease;
+}
+.right-part img:hover{
+    transform: scale(1.1);
+}
 @media screen and (max-width:870px) {
     .left-img-part{
         grid-column-start: 1;
@@ -152,6 +186,18 @@ nav .contact-numbers .number-02{
         grid-column-start: 1;
         grid-column-end: 13;
     }
+    .left-part{
+        padding-top: 10%;
+        color: white;
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 2;
+    }
+    .right-part{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 1;
+    }
 }
 @media screen and (max-width:600px){
     .right-text-part h1{
@@ -162,6 +208,23 @@ nav .contact-numbers .number-02{
     }
     .left-img-part img{
         width: 100%;
+    }
+    #body-part-01{
+        padding: 5%;
+    }
+    .left-part h1{
+        font-size: 30px;
+    }
+    .left-part p{
+        font-size: 12px;
+    }
+    .right-part{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .right-part img{
+        width: 150%;
     }
 }
                                                     /* body-part-02 */
@@ -240,10 +303,11 @@ nav .contact-numbers .number-02{
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    justify-content: center;
     padding-top: 50px;
 }
 #body-part-03 .cards .card{
-    width: 25%;
+    width: 31%;
     /* height: 55vh; */
     padding: 40px 30px 10px 30px;
     background-color: #F3F6F9;
@@ -556,7 +620,7 @@ nav .contact-numbers .number-02{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    padding: 5% 10% 10% ;
+    padding: 5% 10% 50% ;
     height: 80vh;
     background-color: #ffffff;
     background: url("./content-bottom-bg.jpg");
@@ -575,14 +639,19 @@ nav .contact-numbers .number-02{
     color: #0A375D;
 }
 .body-10-top button{
-    padding: 15px 30px;
+    padding: 10px 30px;
     font-weight: bold;
+    border: .5px solid rgb(185, 179, 179);
+    border-radius: 10px;
     color: #019EE8;
     cursor: pointer;
 }
 @media screen and (max-width:570px){
     .body-10-top h3{
         font-size: 35px;
+    }
+    #body-part-10{
+        padding-bottom: 150%;
     }
    
 }
@@ -614,11 +683,11 @@ footer{
     transform: scale(1.1);
 }
 .footer-side-02{
-    grid-column-start: 5;
+    grid-column-start: 4;
     grid-column-end: 10;
+    padding-left: 15%;
     display: flex;
-    /* justify-content: space-between; */
-    gap: 90px;
+    gap: 50px;
 }
 .footer-side-02 ul{
     list-style: none;
